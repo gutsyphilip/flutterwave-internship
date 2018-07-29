@@ -6,6 +6,7 @@ var logger = require('morgan');
 
 // routes
 var indexRouter = require('./routes/index');
+var registerRouter = require('./routes/register')
 
 
 var app = express();
@@ -23,6 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // route middleware setup
 app.use('/', indexRouter);
+app.use('/register', registerRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

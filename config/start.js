@@ -9,12 +9,7 @@ mongoose.connect(process.env.DATABASE).then(()=>{
 }).catch(err=>{
   console.error(`Error connecting to DB→ ${err.message}`)
 });
-mongoose.Promise = global.Promise; 
-
-mongoose.connection.on('error', (err) => {
-  console.error(`Error connecting to DB→ ${err.message}`);
-});
-
+mongoose.Promise = global.Promise;
 
 // Start our app!
 const app = require('../app');

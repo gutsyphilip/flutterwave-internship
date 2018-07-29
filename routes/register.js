@@ -6,8 +6,6 @@ const {
 } = require('../controllers')
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+router.get('/', register.registerAttendee ) 
 
 module.exports = router;
